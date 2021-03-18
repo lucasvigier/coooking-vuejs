@@ -14,7 +14,7 @@ Vue.component('recipe', {
                 <p> {{recipe.readyInMinutes}} </p><br>
             </div>
             <div class="card-action">
-                <a href="#app" @click="handleSelected">show more</a>
+                <a :href="recipe.sourceUrl" >show more</a>
         </div>
       </div>
     </div>`,
