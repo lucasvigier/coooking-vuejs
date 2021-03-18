@@ -1,4 +1,4 @@
-import useMovieApi from "../omdb.js";
+import useRecipeApi from "../omdb.js";
 
 Vue.component('search', {
     template: `
@@ -24,12 +24,12 @@ Vue.component('search', {
       </header>`,
     data: function () {
         return {
-            movieTitle: ""
+            recipetitle: ""
         }
     },
     methods: {
         handleSubmit: function () {
-            useMovieApi.bySearch(this.movieTitle).then(data => this.$emit('search-done', data.Search));
+            useRecipeApi.bySearch(this.recipetitle).then(data => this.$emit('search-done', data.results));
 
         }
     },
