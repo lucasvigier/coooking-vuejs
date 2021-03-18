@@ -10,15 +10,17 @@ Vue.component('search', {
               <a href="index.html">Coo<span>o</span>king</a>
             </div>
           </div>
+          <div class="header-item item-center">
+
+          </div>
           <div class="header-item item-right">
-            <form @submit.prevent="handleSubmit">
-              <input type="text" v-model="movieTitle"/>
-              <input type="submit" value="Search" class="btn"/>
-            </form>
+            
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
           </div>
         </div>
       </div>
-
       </header>`,
     data: function () {
         return {

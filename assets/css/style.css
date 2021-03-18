@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    background: #161a1d;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:before, :after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.v-center {
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    padding: 15px;
+}
+
+.header span {
+    color: #ea4636;
+}
+
+.header .item-left {
+    flex: 0 0 17%;
+}
+
+.header .logo a {
+    font-size: 30px;
+    color: #f5f3f4;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header .item-right {
+    flex: 0 0 80%;
+}
+
+.header .item-right form {
+    float: right;
+}
+
+.header .item-right input{
+    border: none;
+    background: #161a1d;
+    color: #f5f3f4;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header .item-right input:not(.header .item-right input:last-child) {
+    border-bottom: 2px solid #ea4636;
+}
+
+.header .item-right input:last-child {
+    border: 2px solid #ea4636;
+    padding: 5px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.header .item-right input:last-child:hover {
+    background: #ea4636;
+}
