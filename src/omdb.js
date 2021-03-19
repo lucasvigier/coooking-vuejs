@@ -20,19 +20,8 @@ const useRecipeApi = {
             .catch((err) => reject(err))
     }),
 
-    byFiltre : (search, filtre, val) =>new Promise((resolve , reject) => {
-        const RECIPE_API_URL = `https://api.spoonacular.com/recipes/search?apiKey=${API_KEY}&number=2&query=${search}`;
-        if (filtre === "maxCalories" && val !== 0){
-            const RECIPE_API_URL = `https://api.spoonacular.com/recipes/complexSearch?query=${search}&maxCalories=${val}&apiKey=${API_KEY}&number=2`;
-        } else if (filtre === "vegan"){
-            const RECIPE_API_URL = `https://api.spoonacular.com/recipes/complexSearch?query=${search}&vegan=true&apiKey=${API_KEY}&number=2`;
-        } else if (filtre === "vegetarian"){
-            const RECIPE_API_URL = `https://api.spoonacular.com/recipes/complexSearch?query=${search}&vegetarian=true&apiKey=${API_KEY}&number=2`;
-        } else if (filtre === "glutenFree"){
-            const RECIPE_API_URL = `https://api.spoonacular.com/recipes/complexSearch?query=${search}&glutenFree=true&apiKey=${API_KEY}&number=2`;
-        } else if (filtre === "cuisine" && val !== null){
-            const RECIPE_API_URL = `https://api.spoonacular.com/recipes/complexSearch?query=${search}&maxCalories=${val}&cuisine=${val}&apiKey=${API_KEY}&number=2`;
-        }
+    byFiltre : (recipe_api_url) =>new Promise((resolve , reject) => {
+        const RECIPE_API_URL = recipe_api_url;
 
         fetch(RECIPE_API_URL)
             .then(response => response.json())

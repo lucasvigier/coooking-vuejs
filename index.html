@@ -16,7 +16,7 @@
         <div class="tab-filter">
             <form @submit.prevent="handleSubmit">
                 <div class="filter-item">
-                    <h4><input type="checkbox" id="Country" name="Country" v-model="addfiltre">
+                    <h4><input type="checkbox" id="Country" name="Country" v-model="recipefiltre">
                         <label for="Country">Country</label></h4>
                     <div class="filter">
                         <input type="checkbox" id="France" name="France" v-model="addval">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="filter-item">
-                    <h4><input type="checkbox" id="Diets" name="Diets" v-model="addfiltre">
+                    <h4><input type="checkbox" id="Diets" name="Diets" v-model="recipefiltre">
                         <label for="Diets">Diets</label></h4>
                     <div class="filter">
                         <input type="checkbox" id="vegan" name="vegan" v-model="addval">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="filter-item">
-                    <h4><input type="checkbox" id="Intolerances" name="Intolerances" v-model="addfiltre">
+                    <h4><input type="checkbox" id="Intolerances" name="Intolerances" v-model="recipefiltre">
                         <label for="Intolerances">Intolerances</label></h4>
                     <div class="filter">
                         <input type="checkbox" id="dairy" name="dairy" v-model="addval">
