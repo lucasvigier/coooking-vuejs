@@ -5,9 +5,9 @@ Vue.component('detail', {
     template: `
     <table class="striped">
        <tbody>
-            <tr> <td> Titre </td> <td> {{detail.Title}} </td></tr>
-            <tr> <td> URL </td> <td> {{detail.Url}} </td></tr>
-            <tr> <td> Duree </td> <td> {{detail.Duree}} </td></tr>
+<!--            <tr> <td> Titre </td> <td> {{detail.Title}} </td></tr>-->
+<!--            <tr> <td> URL </td> <td> {{detail.Url}} </td></tr>-->
+<!--            <tr> <td> Duree </td> <td> {{detail.Duree}} </td></tr>-->
       </tbody>
   </table>`,
     data : function() {

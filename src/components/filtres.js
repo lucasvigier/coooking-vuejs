@@ -5,6 +5,27 @@ Vue.component('filtre', {
     data: function () {
         return {
             search: '',
+
+            African: '',
+            American: '',
+            British: '',
+            Cajun: '',
+            Caribbean: '',
+            Chinese: '',
+            Eastern_European: '',
+            France: '',
+            German: '',
+
+            dairy: '',
+            peanut: '',
+            soy: '',
+            egg: '',
+            seafood: '',
+            sulfite: '',
+            gluten: '',
+            sesame: '',
+            treenut: '',
+
             ingredients: '',
             ingredientsExclu: '',
             minCalories: '',
@@ -25,7 +46,7 @@ Vue.component('filtre', {
         createRequest: function (){
             let request = 'https://api.spoonacular.com/recipes/complexSearch?`';
             let cuisine = '';
-            let intolérance = '';
+            let intolerance = '';
 
             if (this.search !== ''){
                 request += '&titleMatch=' + this.search
@@ -50,6 +71,10 @@ Vue.component('filtre', {
                 if (this.diettype === 'beverage'){
                     request += '&minAlcohol=10'
                 }
+            }
+
+            if (this.African !== ''){
+
             }
             request += '&apiKey=b51ad72a29914fb4b0ce97a4be312061&number=2'
 
