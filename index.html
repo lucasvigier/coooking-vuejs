@@ -14,36 +14,28 @@
 <script type="text/template" id="filtre">
     <div class="container">
         <div class="filtres-container">
-            <div class="filtre">
-                <form @submit.prevent="handleSubmit" >
-                    <input type="checkbox" id="vegan" name="filtre" v-model="recipefiltre">
-                    <label for="vegan">vegan</label>
-                </form>
-            </div>
-            <div class="filtre">
-                <form @submit.prevent="handleSubmit">
-                    <input type="checkbox" id="vegetarian" name="filtre" v-model="recipefiltre">
-                    <label for="vegetarian">vegetarian</label>
-                </form>
-            </div>
-            <div class="filtre">
-                <form @submit.prevent="handleSubmit">
-                    <input type="checkbox" id="glutenFree" name="filtre" v-model="recipefiltre">
-                    <label for="glutenFree">glutenFree</label>
-                </form>
-            </div>
-            <div class="filtre">
-                <form @submit.prevent="handleSubmit">
-                    <input type="checkbox" id="veryPopular" name="filtre" v-model="recipefiltre">
-                    <label for="veryPopular">veryPopular</label>
-                </form>
-            </div>
-            <div class="filtre">
-                <form @submit.prevent="handleSubmit">
-                    <input type="checkbox" id="veryHealthy" name="filtre" v-model="recipefiltre">
-                    <label for="veryHealthy">veryHealthy</label>
-                </form>
-            </div>
+            <form @submit.prevent="handleSubmit" >
+                <div class="filtre">
+                        <input type="checkbox" id="vegan" name="vegan" v-model="addfiltre">
+                        <label for="vegan">vegan</label>
+                </div>
+                <div class="filtre">
+                        <input type="checkbox" id="vegetarian" name="vegetarian" v-model="addfiltre">
+                        <label for="vegetarian">vegetarian</label>
+                </div>
+                <div class="filtre">
+                        <input type="checkbox" id="glutenFree" name="glutenFree" v-model="addfiltre">
+                        <label for="glutenFree">glutenFree</label>
+                </div>
+                <div class="filtre">
+                        <input type="checkbox" id="veryPopular" name="veryPopular" v-model="addfiltre">
+                        <label for="veryPopular">veryPopular</label>
+                </div>
+                <div class="filtre">
+                        <input type="checkbox" id="veryHealthy" name="veryHealthy" v-model="addfiltre">
+                        <label for="veryHealthy">veryHealthy</label>
+                </div>
+            </form>
         </div>
     </div>
 </script>
