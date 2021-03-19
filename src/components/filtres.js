@@ -251,7 +251,7 @@ Vue.component('filtre', {
                 request += '&intolerances=' + intolerance;
             }
             // Fin de la request avec la API key = b51ad72a29914fb4b0ce97a4be312061
-            request += '&apiKey=b51ad72a29914fb4b0ce97a4be312061&number=2'
+            request += '&apiKey=b51ad72a29914fb4b0ce97a4be312061&number=9'
             this.request = request;
         }
     },
