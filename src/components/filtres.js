@@ -15,6 +15,22 @@ Vue.component('filtre', {
             Eastern_European: '',
             France: '',
             German: '',
+            Greek: '',
+            Indian: '',
+            Irish: '',
+            Italian: '',
+            Japanese: '',
+            Jewish: '',
+            Korean: '',
+            Latin_American: '',
+            Mediterranean: '',
+            Mexican: '',
+            Middle_Eastern: '',
+            Nordic: '',
+            Southern: '',
+            Spanish: '',
+            Thai: '',
+            Vietnamese: '',
 
             dairy: '',
             peanut: '',
@@ -52,6 +68,22 @@ Vue.component('filtre', {
             this.Eastern_European= '';
             this.France= '';
             this.German= '';
+            this.Greek= '';
+            this.Indian= '';
+            this.Irish= '';
+            this.Italian= '';
+            this.Japanese= '';
+            this.Jewish= '';
+            this.Korean= '';
+            this.Latin_American= '';
+            this.Mediterranean= '';
+            this.Mexican= '';
+            this.Middle_Eastern= '';
+            this.Nordic= '';
+            this.Southern= '';
+            this.Spanish= '';
+            this.Thai= '';
+            this.Vietnamese= '';
 
             this.dairy= '';
             this.peanut= '';
@@ -125,6 +157,54 @@ Vue.component('filtre', {
             if (this.German !== ''){
                 pays += 'German,';
             }
+            if (this.Greek !== ''){
+                pays += 'Greek,';
+            }
+            if (this.Indian !== ''){
+                pays += 'Indian,';
+            }
+            if (this.Irish !== ''){
+                pays += 'Irish,';
+            }
+            if (this.Italian !== ''){
+                pays += 'Italian,';
+            }
+            if (this.Japanese !== ''){
+                pays += 'Japanese,';
+            }
+            if (this.Jewish !== ''){
+                pays += 'Jewish,';
+            }
+            if (this.Korean !== ''){
+                pays += 'Korean,';
+            }
+            if (this.Latin_American !== ''){
+                pays += 'Latin_American,';
+            }
+            if (this.Mediterranean !== ''){
+                pays += 'Mediterranean,';
+            }
+            if (this.Mexican !== ''){
+                pays += 'Mexican,';
+            }
+            if (this.Middle_Eastern !== ''){
+                pays += 'Middle_Eastern,';
+            }
+            if (this.Nordic !== ''){
+                pays += 'Nordic,';
+            }
+            if (this.Southern !== ''){
+                pays += 'Southern,';
+            }
+            if (this.Spanish !== ''){
+                pays += 'Spanish,';
+            }
+            if (this.Thai !== ''){
+                pays += 'Thai,';
+            }
+            if (this.Vietnamese !== ''){
+                pays += 'Vietnamese,';
+            }
             if (pays !== ''){
                 request += '&cuisine=' + pays;
             }
@@ -154,7 +234,7 @@ Vue.component('filtre', {
                 intolerance += 'sesame,';
             }
             if (this.treenut !== ''){
-                intolerance += 'treenut,';
+                intolerance += 'tree_nut,';
             }
             if (intolerance !== ''){
                 request += '&intolerances=' + intolerance;
