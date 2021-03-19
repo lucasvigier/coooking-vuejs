@@ -27,7 +27,6 @@ Vue.component('search', {
     methods : {
         handleSubmit : function() {
             useRecipeApi.bySearch(this.recipetitle).then(data =>  this.$emit('search-done', data.results));
-
         }
     },
 

@@ -17,6 +17,15 @@ const useRecipeApi = {
             .then(response => response.json())
                 .then(jsonResponse => resolve(jsonResponse))
             .catch((err) => reject(err))
+    }),
+    byFiltre : (search) =>new Promise((resolve , reject) => {
+        const RECIPE_API_URL = ``;
+
+        fetch(RECIPE_API_URL)
+            .then(response => response.json())
+                .then(jsonResponse => resolve(jsonResponse))
+                    .then(console.log(resolve(jsonResponse)))
+            .catch((err) => reject(err))
     })
 
 };

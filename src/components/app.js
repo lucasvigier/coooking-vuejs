@@ -8,6 +8,9 @@ Vue.component('app', {
                  v-on:recipe-selected="recipeSelected($event)"></recipe>
         </div>
       </div>
+      <div>
+          <filtre></filtre>      
+      </div>
       <div class="col s4">
         <div class="row">
           <detail v-bind:recipeId="selectedId" :key="selectedId"></detail>
@@ -24,6 +27,7 @@ Vue.component('app', {
         searchCompleted : function(data) {
            if (data != undefined) {
                this.recipes = data;
+               console.log(this.recipes);
                this.selectedId = null;
            }
         },

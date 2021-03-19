@@ -6,7 +6,7 @@ Vue.component('recipe', {
     <div class="col s12 m6">
       <div class="card large">
             <div class="card-image">
-                <img :src="recipe.image=='N/A'? 'assets/img/defaut.jpg' : recipe.image" alt="">
+                <img :src="recipe.image =='N/A'? 'assets/img/default.jpg' : recipe.image" alt="">
                 <span class="card-title"> {{recipe.title}} </span>
             </div>
        

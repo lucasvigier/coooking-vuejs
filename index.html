@@ -9,9 +9,50 @@
     <script src="assets/VueJS/vue.js"></script>
 </head>
 <body>
+
+
+<script type="text/template" id="filtre">
+    <div class="container">
+        <div class="filtres-container">
+            <div class="filtre">
+                <form @submit.prevent="handleSubmit" >
+                    <input type="checkbox" id="vegan" name="filtre" v-model="recipefiltre">
+                    <label for="vegan">vegan</label>
+                </form>
+            </div>
+            <div class="filtre">
+                <form @submit.prevent="handleSubmit">
+                    <input type="checkbox" id="vegetarian" name="filtre" v-model="recipefiltre">
+                    <label for="vegetarian">vegetarian</label>
+                </form>
+            </div>
+            <div class="filtre">
+                <form @submit.prevent="handleSubmit">
+                    <input type="checkbox" id="glutenFree" name="filtre" v-model="recipefiltre">
+                    <label for="glutenFree">glutenFree</label>
+                </form>
+            </div>
+            <div class="filtre">
+                <form @submit.prevent="handleSubmit">
+                    <input type="checkbox" id="veryPopular" name="filtre" v-model="recipefiltre">
+                    <label for="veryPopular">veryPopular</label>
+                </form>
+            </div>
+            <div class="filtre">
+                <form @submit.prevent="handleSubmit">
+                    <input type="checkbox" id="veryHealthy" name="filtre" v-model="recipefiltre">
+                    <label for="veryHealthy">veryHealthy</label>
+                </form>
+            </div>
+        </div>
+    </div>
+</script>
+
+
 <app></app>
 <script type="module" src="src/omdb.js"></script>
 <script type="module" src="src/components/detail.js"></script>
+<script type="module" src="src/components/filtres.js"></script>
 <script type="module" src="src/components/search.js"></script>
 <script type="module" src="src/components/recipe.js"></script>
 <script type="module" src="src/components/app.js"></script>
