@@ -14,7 +14,7 @@
 <script type="text/template" id="filtre">
     <div class="filter-wrapper">
         <div class="tab-filter">
-            <form @submit.prevent="handleSubmit">
+            <form >
                 <div class="filter-item">
                     <h4>Country</h4>
                     <div class="filter">
@@ -42,8 +42,8 @@
                         <label for="Chinese">Chinese</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="EasternEuropean" name="pays" v-model="EasternEuropean">
-                        <label for="EasternEuropean">Eastern European</label>
+                        <input type="checkbox" id="Eastern_European" name="pays" v-model="Eastern_European">
+                        <label for="Eastern_European">Eastern European</label>
                     </div>
                     <div class="filter">
                         <input type="checkbox" id="France" name="pays" v-model="France">
@@ -124,8 +124,11 @@
                 <div class="filter-item">
                     <h4>Calories</h4>
                     <label for="calories">Calories</label>
-                    <input type="range" min="0" max="100" id="calories" name="calories" v-model="addfiltre">
+                    <input type="range" min="0" max="100" id="calories" name="calories" >
                 </div>
+            </form>
+            <form @submit.prevent="handleSubmit">
+                <input type="submit" value="Filtrer" class="btn"/>
             </form>
         </div>
     </div>
