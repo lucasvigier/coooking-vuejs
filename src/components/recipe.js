@@ -9,7 +9,6 @@ Vue.component('recipe', {
                 <img :src="recipe.image =='N/A'? 'assets/img/default.jpg' : recipe.image.startsWith('https://spoonacular.com/recipeImages/') == true ?  recipe.image : 'https://spoonacular.com/recipeImages/' + recipe.image" alt="">
                 <span class="card-title"> {{recipe.title}} </span>
             </div>
-       
             <div class="card-content">
                 <p> {{recipe.readyInMinutes}} </p><br>
             </div>
