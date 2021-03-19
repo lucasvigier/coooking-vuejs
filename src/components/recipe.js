@@ -6,7 +6,7 @@ Vue.component('recipe', {
     <div class="col s12 m6">
       <div class="card large">
             <div class="card-image">
-                <img :src="recipe.image =='N/A'? 'assets/img/default.jpg' : 'https://spoonacular.com/recipeImages/'+recipe.image" alt="">
+                <img :src="recipe.image =='N/A'? 'assets/img/default.jpg' : recipe.image.startsWith('https://spoonacular.com/recipeImages/') == true ?  recipe.image : 'https://spoonacular.com/recipeImages/' + recipe.image" alt="">
                 <span class="card-title"> {{recipe.title}} </span>
             </div>
        
@@ -20,8 +20,8 @@ Vue.component('recipe', {
     </div>`,
     methods : {
         handleSelected : function() {
-           this.$emit('recipe-selected',this.recipe.imdbID);
-        }
+            this.$emit('recipe-selected',this.recipe.imdbID);
+        },
     },
     created(){
         console.log(this.props);

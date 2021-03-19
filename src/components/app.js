@@ -4,12 +4,11 @@ Vue.component('app', {
       <search @search-done="searchCompleted"></search>
       <div class="col s8">
         <div class="row">
-          <recipe v-for="recipe in recipes" v-bind:key="recipe.imdbID" :recipe=recipe
-                  v-on:recipe-selected="recipeSelected($event)"></recipe>
+          <recipe v-for="recipe in recipes" v-bind:key="recipe.imdbID" :recipe=recipe v-on:recipe-selected="recipeSelected($event)"></recipe>
         </div>
       </div>
       <div>
-        <filtre></filtre>
+        <filtre @search-done="searchCompleted"></filtre>
       </div>
       <div class="col s4">
         <div class="row">
