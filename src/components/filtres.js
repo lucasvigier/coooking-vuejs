@@ -38,11 +38,11 @@ Vue.component('filtre', {
 
         handleSubmit: function () {
             this.createRequest();
-            this.deletefiler();
+            this.deletefilter();
             useRecipeApi.byFiltre(this.request).then(data => this.$emit('search-done', data.results));
 
         },
-        deletefiler: function (){
+        deletefilter: function (){
             this.African = '';
             this.American= '';
             this.British= '';

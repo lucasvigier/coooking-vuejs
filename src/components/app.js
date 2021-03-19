@@ -21,7 +21,6 @@ Vue.component('app', {
         return {
             recipes: [],
             selectedId: null
-
         }
     },
     methods: {
