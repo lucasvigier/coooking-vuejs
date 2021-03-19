@@ -5,11 +5,11 @@ Vue.component('app', {
       <div class="col s8">
         <div class="row">
           <recipe v-for="recipe in recipes" v-bind:key="recipe.imdbID" :recipe=recipe
-                 v-on:recipe-selected="recipeSelected($event)"></recipe>
+                  v-on:recipe-selected="recipeSelected($event)"></recipe>
         </div>
       </div>
       <div>
-          <filtre></filtre>      
+        <filtre></filtre>
       </div>
       <div class="col s4">
         <div class="row">
@@ -22,18 +22,20 @@ Vue.component('app', {
             recipes: [],
             selectedId: null
 
-    }},
+        }
+    },
     methods: {
-        searchCompleted : function(data) {
-           if (data != undefined) {
-               this.recipes = data;
-               console.log(this.recipes);
-               this.selectedId = null;
-           }
+        searchCompleted: function (data) {
+            if (data != undefined) {
+                this.recipes = data;
+                console.log(this.recipes);
+                this.selectedId = null;
+            }
         },
-        recipeSelected : function(id){
+        recipeSelected: function (id) {
             console.log(id);
-            this.selectedId=id;
+            this.selectedId = id;
 
-        }}
+        }
+    }
 })

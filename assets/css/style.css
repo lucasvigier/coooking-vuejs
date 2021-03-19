@@ -73,7 +73,7 @@ a {
     float: right;
 }
 
-.header .item-right input{
+.header .item-right input {
     border: none;
     background: #161a1d;
     color: #f5f3f4;
@@ -96,4 +96,35 @@ a {
 
 .header .item-right input:last-child:hover {
     background: #ea4636;
+}
+
+
+.filter-wrapper {
+    background-color: #252c30;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: absolute;
+    border-radius: 0 10px 10px 0;
+    padding: 30px 20px;
+    color: #f5f3f4;
+    margin-top: 30px;
+}
+
+.tab-filter {
+    position: relative;
+    height: 100%;
+    width: 250px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.tab-filter h4 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f5f3f4;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.filter-item {
+    margin-bottom: 30px;
 }
