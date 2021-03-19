@@ -121,27 +121,27 @@
                 <div class="filter-item">
                     <h4>Diets</h4>
                     <div class="filter">
-                        <input type="radio" id="vegan" name="Diettype" v-model="diettype">
+                        <input type="radio" id="vegan" name="diet" v-model="vegan">
                         <label for="vegan">Vegan</label>
                     </div>
                     <div class="filter">
-                        <input type="radio" id="vegetarian" name="Diettype" v-model="diettype">
+                        <input type="radio" id="vegetarian" name="diet" v-model="vegetarian">
                         <label for="vegetarian">Vegetarian</label>
                     </div>
                     <div class="filter">
-                        <input type="radio" id="paleo" name="Diettype" v-model="diettype">
+                        <input type="radio" id="paleo" name="diet" v-model="paleo">
                         <label for="paleo">Paleo</label>
                     </div>
                     <div class="filter">
-                        <input type="radio" id="Ketogenic" name="Diettype" v-model="diettype">
+                        <input type="radio" id="Ketogenic" name="diet" v-model="Ketogenic">
                         <label for="Ketogenic">Ketogenic</label>
                     </div>
                     <div class="filter">
-                        <input type="radio" id="primal" name="Diettype" v-model="diettype">
+                        <input type="radio" id="primal" name="diet" v-model="primal">
                         <label for="primal">Primal</label>
                     </div>
                     <div class="filter">
-                        <input type="radio" id="whole30" name="Diettype" v-model="diettype">
+                        <input type="radio" id="whole30" name="diet" v-model="whole30">
                         <label for="whole30">Whole 30</label>
                     </div>
                 </div>
@@ -181,17 +181,23 @@
                     </div>
                     <div class="filtre">
                         <input type="checkbox" id="tree-nut" name="tree-nut" v-model="treenut">
-                        <label for="tree-nut">TreeNut Free</label>Wheat
+                        <label for="tree-nut">TreeNut Free</label>
                     </div>
                     <div class="filtre">
                         <input type="checkbox" id="Wheat" name="Wheat" v-model="Wheat">
-                        <label for="Wheat">Wheat</label>
+                        <label for="Wheat">Wheat Free</label>
                     </div>
                 </div>
                 <div class="filter-item">
                     <h4>Calories</h4>
-                    <label for="calories">Calories</label>
-                    <input type="range" min="0" max="100" id="calories" name="calories" >
+                    <div class="filter">
+                        <label for="CaloriesMin">CaloriesMin : (between 0 and 50)</label>
+                        <input type="range" min="0" max="50" id="CaloriesMin" name="CaloriesMin" v-model="CaloriesMin">
+                    </div>
+                    <div class="filter">
+                        <label for="CaloriesMax">CaloriesMax : (between 50 and 800)</label>
+                        <input type="range" min="50" max="800" id="CaloriesMax" name="CaloriesMax" v-model="CaloriesMax">
+                    </div>
                 </div>
             </form>
             <form @submit.prevent="handleSubmit">

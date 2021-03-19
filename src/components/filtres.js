@@ -5,7 +5,7 @@ Vue.component('filtre', {
     data: function () {
         return {
             request: '',
-
+            // Country VARIABLE
             African: '',
             American: '',
             British: '',
@@ -31,7 +31,7 @@ Vue.component('filtre', {
             Spanish: '',
             Thai: '',
             Vietnamese: '',
-
+            // INTOLERANCE VARIABLE
             dairy: '',
             peanut: '',
             soy: '',
@@ -41,13 +41,17 @@ Vue.component('filtre', {
             gluten: '',
             sesame: '',
             treenut: '',
-
-            ingredients: '',
-            ingredientsExclu: '',
+            Wheat: '',
+            //CALORIES VARIABLE
             minCalories: '',
             maxCalories: '',
-            diet: '',
-            diettype: ''
+            //DIET VARIABLE
+            vegan: '',
+            vegetarian: '',
+            paleo: '',
+            Ketogenic: '',
+            primal: '',
+            whole30: '',
         }
     },
     methods: {
@@ -59,6 +63,7 @@ Vue.component('filtre', {
 
         },
         deletefilter: function (){
+            // Country DEL
             this.African = '';
             this.American= '';
             this.British= '';
@@ -84,7 +89,7 @@ Vue.component('filtre', {
             this.Spanish= '';
             this.Thai= '';
             this.Vietnamese= '';
-
+            // INTOLERANCE DEL
             this.dairy= '';
             this.peanut= '';
             this.soy= '';
@@ -94,42 +99,45 @@ Vue.component('filtre', {
             this.gluten= '';
             this.sesame= '';
             this.treenut= '';
-
-            this.ingredients= '';
-            this.ingredientsExclu= '';
-            this.minCalories= '';
-            this.maxCalories= '';
-            this.diet= '';
-            this.diettype= '';
+            this.Wheat= '';
+            //CALORIES DEL
+            this.CaloriesMin= 0;
+            this.CaloriesMax= 800;
+            //DIET DEL
+            this.vegan= '';
+            this.vegetarian= '';
+            this.paleo= '';
+            this.Ketogenic= '';
+            this.primal= '';
+            this.whole30= '';
         },
 
         createRequest: function (){
             let request = 'https://api.spoonacular.com/recipes/complexSearch?';
             let pays = '';
             let intolerance = '';
-
-            if (this.ingredients !== ''){
-                request += '&includeIngredients=' + this.ingredients
+            //CALORIES ADD
+            if (this.CaloriesMin !== null){
+                request += '&minCalories=' + this.CaloriesMin
             }
-            if (this.ingredientsExclu !== ''){
-                request += '&excludeIngredients=' + this.ingredientsExclu
+            if (this.CaloriesMax !== null){
+                request += '&maxCalories=' + this.CaloriesMax
             }
-            if (this.minCalories){
-                request += '&minCalories=' + this.minCalories
+            // Diet ADD
+            if (this.vegan !== ''){
+                request += '&diet=vegan'
+            } else if (this.vegetarian !== ''){
+                request += '&diet=vegetarian'
+            } else if (this.paleo !== ''){
+                request += '&diet=paleo'
+            } else if (this.Ketogenic !== ''){
+                request += '&diet=Ketogenic'
+            } else if (this.primal !== ''){
+                request += '&diet=primal'
+            } else if (this.whole30 !== ''){
+                request += '&diet=whole30'
             }
-            if (this.maxCalories){
-                request += '&maxCalories=' + this.maxCalories
-            }
-            if (this.diet !== ''){
-                request += '&diet=' + this.diet
-            }
-            if (this.diettype !== ''){
-                request += '&type=' + this.diettype
-                if (this.diettype === 'beverage'){
-                    request += '&minAlcohol=10'
-                }
-            }
-
+            // Country ADD
             if (this.African !== ''){
                 pays += 'African,';
             }
@@ -208,7 +216,7 @@ Vue.component('filtre', {
             if (pays !== ''){
                 request += '&cuisine=' + pays;
             }
-
+            // INTOLERANCE ADD
             if (this.dairy !== ''){
                 intolerance += 'dairy,';
             }
@@ -236,10 +244,13 @@ Vue.component('filtre', {
             if (this.treenut !== ''){
                 intolerance += 'tree_nut,';
             }
+            if (this.Wheat !== ''){
+                intolerance += 'wheat,';
+            }
             if (intolerance !== ''){
                 request += '&intolerances=' + intolerance;
             }
-
+            // Fin de la request avec la API key = b51ad72a29914fb4b0ce97a4be312061
             request += '&apiKey=b51ad72a29914fb4b0ce97a4be312061&number=2'
             this.request = request;
         }
