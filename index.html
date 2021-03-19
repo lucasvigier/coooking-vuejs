@@ -16,71 +16,74 @@
         <div class="tab-filter">
             <form @submit.prevent="handleSubmit">
                 <div class="filter-item">
-                    <h4>Country</h4>
+                    <h4><input type="checkbox" id="Country" name="Country" v-model="addfiltre">
+                        <label for="Country">Country</label></h4>
                     <div class="filter">
-                        <input type="checkbox" id="France" name="France" v-model="addfiltre">
+                        <input type="checkbox" id="France" name="France" v-model="addval">
                         <label for="France">France</label>
                     </div>
                 </div>
                 <div class="filter-item">
-                    <h4>Diets</h4>
+                    <h4><input type="checkbox" id="Diets" name="Diets" v-model="addfiltre">
+                        <label for="Diets">Diets</label></h4>
                     <div class="filter">
-                        <input type="checkbox" id="vegan" name="vegan" v-model="addfiltre">
+                        <input type="checkbox" id="vegan" name="vegan" v-model="addval">
                         <label for="vegan">Vegan</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="vegetarian" name="vegetarian" v-model="addfiltre">
+                        <input type="checkbox" id="vegetarian" name="vegetarian" v-model="addval">
                         <label for="vegetarian">Vegetarian</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="paleo" name="paleo" v-model="addfiltre">
+                        <input type="checkbox" id="paleo" name="paleo" v-model="addval">
                         <label for="paleo">Paleo</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="Ketogenic" name="Ketogenic" v-model="addfiltre">
+                        <input type="checkbox" id="Ketogenic" name="Ketogenic" v-model="addval">
                         <label for="Ketogenic">Ketogenic</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="primal" name="primal" v-model="addfiltre">
+                        <input type="checkbox" id="primal" name="primal" v-model="addval">
                         <label for="primal">Primal</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="whole30" name="whole30" v-model="addfiltre">
+                        <input type="checkbox" id="whole30" name="whole30" v-model="addval">
                         <label for="whole30">Whole 30</label>
                     </div>
                 </div>
                 <div class="filter-item">
-                    <h4>Intolerances</h4>
+                    <h4><input type="checkbox" id="Intolerances" name="Intolerances" v-model="addfiltre">
+                        <label for="Intolerances">Intolerances</label></h4>
                     <div class="filter">
-                        <input type="checkbox" id="dairy" name="dairy" v-model="addfiltre">
+                        <input type="checkbox" id="dairy" name="dairy" v-model="addval">
                         <label for="dairy">Dairy Free</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="peanut" name="peanut" v-model="addfiltre">
+                        <input type="checkbox" id="peanut" name="peanut" v-model="addval">
                         <label for="peanut">Peanut Free</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="soy" name="soy" v-model="addfiltre">
+                        <input type="checkbox" id="soy" name="soy" v-model="addval">
                         <label for="soy">Soy Free</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="egg" name="egg" v-model="addfiltre">
+                        <input type="checkbox" id="egg" name="egg" v-model="addval">
                         <label for="egg">Egg Free</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="seafood" name="seafood" v-model="addfiltre">
+                        <input type="checkbox" id="seafood" name="seafood" v-model="addval">
                         <label for="seafood">Seafood Free</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="sulfite" name="sulfite" v-model="addfiltre">
+                        <input type="checkbox" id="sulfite" name="sulfite" v-model="addval">
                         <label for="sulfite">Sulfite Free</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="gluten" name="gluten" v-model="addfiltre">
+                        <input type="checkbox" id="gluten" name="gluten" v-model="addval">
                         <label for="gluten">Gluten Free</label>
                     </div>
                     <div class="filter">
-                        <input type="checkbox" id="sesame" name="sesame" v-model="addfiltre">
+                        <input type="checkbox" id="sesame" name="sesame" v-model="addval">
                         <label for="sesame">Sesame Free</label>
                     </div>
                 </div>
