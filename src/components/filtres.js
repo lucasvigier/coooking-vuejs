@@ -4,6 +4,7 @@ Vue.component('filtre', {
     template: '#filtre',
     data: function () {
         return {
+            request: '',
             search: '',
 
             African: '',
@@ -37,15 +38,13 @@ Vue.component('filtre', {
     methods: {
 
         handleSubmit: function () {
-            console.log(this.recipefiltre);
-            console.log(this.recipetitle);
-            console.log(this.recipeval);
-            useRecipeApi.byFiltre(this.recipetitle, this.recipefiltre, this.recipeval).then(data => this.$emit('search-done', data.results));
+            this.createRequest();
+            useRecipeApi.byFiltre(this.request).then(data => this.$emit('search-done', data.results));
         },
 
         createRequest: function (){
             let request = 'https://api.spoonacular.com/recipes/complexSearch?`';
-            let cuisine = '';
+            let pays = '';
             let intolerance = '';
 
             if (this.search !== ''){
@@ -74,10 +73,69 @@ Vue.component('filtre', {
             }
 
             if (this.African !== ''){
-
+                pays += this.African +',';
             }
-            request += '&apiKey=b51ad72a29914fb4b0ce97a4be312061&number=2'
+            if (this.American !== ''){
+                pays += this.American +',';
+            }
+            if (this.British !== ''){
+                pays += this.British +',';
+            }
+            if (this.Cajun !== ''){
+                pays += this.Cajun +',';
+            }
+            if (this.Caribbean !== ''){
+                pays += this.Caribbean +',';
+            }
+            if (this.Chinese !== ''){
+                pays += this.Chinese +',';
+            }
+            if (this.Eastern_European !== ''){
+                pays += this.Eastern_European +',';
+            }
+            if (this.France !== ''){
+                pays += this.France +',';
+            }
+            if (this.German !== ''){
+                pays += this.German +',';
+            }
+            if (pays !== ''){
+                request += '&country=' + pays;
+            }
 
+            if (this.dairy !== ''){
+                intolerance += this.dairy +',';
+            }
+            if (this.peanut !== ''){
+                intolerance += this.peanut +',';
+            }
+            if (this.soy !== ''){
+                intolerance += this.soy +',';
+            }
+            if (this.egg !== ''){
+                intolerance += this.egg +',';
+            }
+            if (this.seafood !== ''){
+                intolerance += this.seafood +',';
+            }
+            if (this.sulfite !== ''){
+                intolerance += this.sulfite +',';
+            }
+            if (this.gluten !== ''){
+                intolerance += this.gluten +',';
+            }
+            if (this.sesame !== ''){
+                intolerance += this.sesame +',';
+            }
+            if (this.treenut !== ''){
+                intolerance += this.treenut +',';
+            }
+            if (intolerance !== ''){
+                request += '&intolerances =' + intolerance;
+            }
+
+            request += '&apiKey=b51ad72a29914fb4b0ce97a4be312061&number=2'
+            this.request = request;
         }
     },
 })
