@@ -2,14 +2,7 @@ import useRecipeApi from "../omdb.js";
 
 Vue.component('detail', {
     props: ["recipeId"],
-    template: `
-    <table class="striped">
-       <tbody>
-<!--            <tr> <td> Titre </td> <td> {{detail.Title}} </td></tr>-->
-<!--            <tr> <td> URL </td> <td> {{detail.Url}} </td></tr>-->
-<!--            <tr> <td> Duree </td> <td> {{detail.Duree}} </td></tr>-->
-      </tbody>
-  </table>`,
+    template: '#detail',
     data : function() {
         return {
             detail : {

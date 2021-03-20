@@ -1,21 +1,5 @@
 Vue.component('app', {
-    template: `
-      <div id="app">
-      <search @search-done="searchCompleted"></search>
-      <div class="col s8">
-        <div class="row">
-          <recipe v-for="recipe in recipes" v-bind:key="recipe.imdbID" :recipe=recipe v-on:recipe-selected="recipeSelected($event)"></recipe>
-        </div>
-      </div>
-      <div>
-        <filtre @search-done="searchCompleted"></filtre>
-      </div>
-      <div class="col s4">
-        <div class="row">
-          <detail v-bind:recipeId="selectedId" :key="selectedId"></detail>
-        </div>
-      </div>
-      </div>`,
+    template: '#appp',
     data: function () {
         return {
             recipes: [],
