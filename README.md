@@ -1,24 +1,10 @@
-# coooknig-vuejs
+# Coooking-vuejs
 
-## Project setup
-```
-npm install
-```
+Bienvenue sur le projet coooking d'Antoine PETIT et de Lucas VIGIER
+Nous n'avons pas utilisés de CLI pour ce projet. 
+Donc il n'y a pas de procédure d'installation précise.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Bonne navigation sur notre site Web !!! :)
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
