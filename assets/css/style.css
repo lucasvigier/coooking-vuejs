@@ -48,6 +48,7 @@ a {
     position: relative;
     z-index: 99;
     padding: 15px;
+    margin-bottom: 2em;
 }
 
 .header span {
@@ -103,19 +104,18 @@ a {
     background-color: #252c30;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
     z-index: 1;
-    position: absolute;
-    border-radius: 0 10px 10px 0;
-    padding: 30px 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
     color: #f5f3f4;
     margin-top: 30px;
+    margin-left: 5%;
+    width: 90%;
 }
 
 .tab-filter {
-    position: relative;
-    height: 100%;
-    width: 250px;
-    margin: 0 auto;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .tab-filter h4 {
@@ -125,6 +125,53 @@ a {
     text-align: center;
 }
 
-.filter-item {
-    margin-bottom: 30px;
+.tab-filter form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-container {
+    padding: 0;
+    margin: 0;
+}
+
+.card-large {
+    background: #252c30;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    color: white;
+}
+
+.card-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image span {
+    margin: 15px 0;
+}
+
+.card-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.card-content {
+    padding: 15px 0;
+}
+
+.card-action a {
+    padding: 10px 15px;
+    border: 2px solid #ea4636;
+    color: #f5f3f4;
+    border-radius: 30px;
+}
+
+.card-action a:hover {
+    background: #ea4636;
+}
+
+.card-action {
+    margin-bottom: 15px;
 }
