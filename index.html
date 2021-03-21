@@ -276,8 +276,8 @@
         <div class="card-large">
             <div class="card-image">
                 <span class="card-title"> {{ recipe.title }} </span>
-                <img :src="recipe.image =='N/A'? 'assets/img/default.jpg' : recipe.image.startsWith('https://spoonacular.com/recipeImages/') == true ?  recipe.image : 'https://spoonacular.com/recipeImages/' + recipe.image"
-                     alt="">
+                <a href="#app" @click="handleSelected"><img :src="recipe.image =='N/A'? 'assets/img/default.jpg' : recipe.image.startsWith('https://spoonacular.com/recipeImages/') == true ?  recipe.image : 'https://spoonacular.com/recipeImages/' + recipe.image"
+                     alt=""></a>
             </div>
             <div class="card-content">
                 <p> {{ recipe.readyInMinutes }} min</p><br>
@@ -293,16 +293,20 @@
     <table class="striped">
         <tbody>
         <tr>
-            <td> Titre</td>
-            <td> {{ detail.Title }}</td>
+            <td> Titre :</td>
+            <td> {{ detail.title }}</td>
         </tr>
         <tr>
-            <td> URL</td>
-            <td> {{ detail.Url }}</td>
+            <td> URL :</td>
+            <td> {{ detail.sourceUrl }}</td>
         </tr>
         <tr>
-            <td> Duree</td>
-            <td> {{ detail.Duree }}</td>
+            <td> Duree :</td>
+            <td> {{ detail.readyInMinutes }}</td>
+        </tr>
+        <tr>
+            <td> Portions :</td>
+            <td> {{ detail.servings }}</td>
         </tr>
         </tbody>
     </table>

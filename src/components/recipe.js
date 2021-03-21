@@ -5,7 +5,7 @@ Vue.component('recipe', {
     template: '#recipe',
     methods : {
         handleSelected : function() {
-            this.$emit('recipe-selected',this.recipe.imdbID);
+            this.$emit('recipe-selected',this.recipe.id);
         },
     },
     created(){

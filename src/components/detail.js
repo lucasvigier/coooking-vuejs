@@ -6,15 +6,16 @@ Vue.component('detail', {
     data : function() {
         return {
             detail : {
-                Title: null,
-                Url: null,
-                Duree: null,
-                Ratings : []
+                title: null,
+                sourceUrl: null,
+                readyInMinutes: null,
+                servings: null
             },
         }
     },
     mounted(){
-        if (this.recipeId != undefined) {
+        console.log("test");
+        if (this.recipeId !== undefined) {
             useRecipeApi.byId(this.recipeId).then(data => {
                 this.detail = data;
                 console.log(data)
