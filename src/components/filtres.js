@@ -113,7 +113,7 @@ Vue.component('filtre', {
         },
 
         createRequest: function (){
-            let request = 'https://api.spoonacular.com/recipes/complexSearch?';
+            let request = 'https://api.spoonacular.com/recipes/search?';
             let pays = '';
             let intolerance = '';
             //CALORIES ADD
